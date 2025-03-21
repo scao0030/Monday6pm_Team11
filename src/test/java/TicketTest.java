@@ -19,8 +19,8 @@ public class TicketTest {
     }
 
     @Test
-    @DisplayName("validate ticket price when passenger is under 15")
-    public void testPriceWhenPassengerUnder15(){
+    @DisplayName("validate ticket price when passenger is between 1 and 15")
+    public void testPriceWhenPassengerIsBetween1And15(){
         ticket.getPassenger().setAge(14);
         ticket.setPrice(10);
         assertEquals(5,ticket.getPrice());
@@ -32,5 +32,13 @@ public class TicketTest {
         ticket.getPassenger().setAge(60);
         ticket.setPrice(10);
         assertEquals(0,ticket.getPrice());
+    }
+
+    @Test
+    @DisplayName("validate ticket price when passenger is between 15 and 60 ")
+    public void testPriceWhenPassengerBetween15And60(){
+        ticket.getPassenger().setAge(15);
+        ticket.setPrice(10);
+        assertEquals(11,ticket.getPrice());
     }
 }
