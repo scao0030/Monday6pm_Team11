@@ -13,6 +13,10 @@ public class TicketSystem <T>
     Flight flight = new Flight();
     Scanner in = new Scanner(System.in);
 
+    public Ticket getFinalTicket() {
+        return this.ticket;
+    }
+
     public TicketSystem()
     {
          passenger = new Passenger();
@@ -343,3 +347,4 @@ public class TicketSystem <T>
     }
 
 }
+
