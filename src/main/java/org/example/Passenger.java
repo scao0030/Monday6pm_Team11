@@ -1,6 +1,6 @@
 package org.example;
 
-public class Passenger extends Person
+    public class Passenger extends Person
 {
     private String email;
     private String phoneNumber;

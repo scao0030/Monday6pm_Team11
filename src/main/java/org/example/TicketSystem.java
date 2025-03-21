@@ -42,7 +42,7 @@ public class TicketSystem <T>
         Ticket validTicket = TicketCollection.getTicketInfo(ticket_id);
        
         //if there is a valid ticket id was input then we buy it, otherwise show message
-        if(validTicket != null)
+        if(validTicket == null)
         {
             System.out.println("This ticket does not exist.");
             return;
@@ -145,14 +145,14 @@ public class TicketSystem <T>
         
         Ticket validTicketfirst = TicketCollection.getTicketInfo(ticket_id_first);
         
-        Ticket validTicketSecond = TicketCollection.getTicketInfo(ticket_id_first);
+        Ticket validTicketSecond = TicketCollection.getTicketInfo(ticket_id_second);
         
       
         System.out.println("Processing...");
         
         //if there is a valid ticket id was input then we buy it, otherwise show message
         
-         if(validTicketfirst!=null || validTicketSecond!=null)
+         if(validTicketfirst == null || validTicketSecond == null)
         {
             System.out.println("This ticket does not exist.");
             return;
