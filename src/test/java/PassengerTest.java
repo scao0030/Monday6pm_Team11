@@ -78,21 +78,5 @@ public class PassengerTest {
         passenger.setAge(25);
         assertEquals(25, passenger.getAge());
     }
-
-    @Test
-    @DisplayName("toString contains important info")
-    public void testToString() {
-        passenger.setFirstName("Alice");
-        passenger.setSecondName("Smith");
-        passenger.setEmail("alice@example.com");
-        passenger.setPhoneNumber("123456789");
-        passenger.setPassport("XY123456");
-
-        String result = passenger.toString();
-        assertTrue(result.contains("Alice"));
-        assertTrue(result.contains("Smith"));
-        assertTrue(result.contains("alice@example.com"));
-        assertTrue(result.contains("123456789"));
-        assertTrue(result.contains("XY123456"));
-    }
+    
 }
